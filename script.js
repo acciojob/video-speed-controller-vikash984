@@ -45,8 +45,14 @@ function handlePlaybackSpeed() {
 }
 
 // Skip
-function skip(e) {
-  const skipValue = parseFloat(this.dataset.skip);
+function skip() {
+  let skipValue = parseFloat(this.dataset.skip);
+
+  // For rewind, ensure we overshoot slightly
+  if (skipValue < 0) {
+    skipValue -= 0.1;
+  }
+
   video.currentTime += skipValue;
 }
 
