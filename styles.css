@@ -1,2 +1,56 @@
 
 /* Your CSS Code here. */
+.player {
+  max-width: 750px;
+  margin: 20px auto;
+  background: #222;
+  color: white;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.player__video {
+  width: 100%;
+  display: block;
+}
+
+.player__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #333;
+  padding: 10px;
+}
+
+.player__button,
+.rewind,
+.skip {
+  background: none;
+  border: 0;
+  color: white;
+  font-size: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.player__slider {
+  width: 100px;
+  margin: 0 10px;
+}
+
+.progress {
+  flex: 1;
+  height: 10px;
+  background: #555;
+  cursor: pointer;
+  position: relative;
+  margin-right: 10px;
+}
+
+.progress__filled {
+  width: 0%;
+  background: #f00;
+  height: 100%;
+  flex-basis: 0;
+  flex-grow: 1;
+}
